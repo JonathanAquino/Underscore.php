@@ -1,0 +1,7 @@
+{
+    "name": "JonathanAquino/Underscore.php",
+    "type": "library",
+    "autoload": {
+        "classmap": ["underscore.php"]
+    }
+}
