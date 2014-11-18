@@ -125,8 +125,8 @@ class UnderscoreArraysTest extends PHPUnit_Framework_TestCase {
     $result = $func(1, 2, 1, 0, 3, 1, 4);
     $this->assertEquals(array(1=>2,4=>3,6=>4), $result, 'works on an arguments object');
 
-    $result = __::union(array(1, 2, 3), array(2, 30, 1), array(1, 40));
-    $this->assertEquals('1 2 3 30 40', join(' ', $result), 'takes the union of a list of nested arrays');
+    $result = __::union(array(1, 2, 3), array(2, 30, 1), array(1, 40, array(1)));
+    $this->assertEquals('1 2 3 30 40 1', join(' ', $result), 'takes the union of a list of nested arrays');
 
     // docs
     $this->assertEquals(array(5, 4, 4=>1), __::without(array(5, 4, 3, 2, 1), 3, 2));
