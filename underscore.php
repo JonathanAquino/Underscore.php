@@ -340,7 +340,7 @@ class __ {
     $arrays = func_get_args();
 
     $__ = new self;
-    return $__->flatten(array_values(array_unique(call_user_func_array('array_merge', $arrays))));
+    return $__->flatten(array_values(array_unique(call_user_func_array('array_merge', $arrays), SORT_REGULAR)));
   }
 
 
